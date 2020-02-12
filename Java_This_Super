@@ -1,0 +1,38 @@
+ParentClass.java 
+public class ParentClass 
+{   
+    public void showMyName() 
+    {
+        System.out.println("In ParentClass");
+    }
+}
+
+
+ChildClass.java 
+public class ChildClass extends ParentClass 
+{
+    public void showMyName() 
+    {
+        System.out.println("In ChildClass");
+    }
+     
+    public void test() 
+    {
+        this.showMyName();
+         
+        super.showMyName();
+    }
+}
+
+
+
+Main.java 
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        ChildClass childObj = new ChildClass();
+         
+        childObj.test();
+    }
+}
